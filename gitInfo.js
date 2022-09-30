@@ -10,7 +10,7 @@
 */
 
 //CODE HERE
-
+let gitDefinition = "git is a terminal program that allows you to track changes, save those changes, and then upload files to a cloud database"
 //////////////////PROBLEM 2////////////////////
 /*
     Create a variable called 'gitHubDefinition'.  
@@ -18,7 +18,7 @@
 */
 
 //CODE HERE
-
+let gitHubDefinition = "gitHub is an internet server that allows you to store versions of your software code online."
 //////////////////PROBLEM 3////////////////////
 /*
     Create a variable called 'gitInitDefinition'.  
@@ -26,7 +26,7 @@
 */
 
 //CODE HERE
-
+let gitInitDefinition = "git init starts a local repository in the current folder you are in"
 //////////////////PROBLEM 4////////////////////
 /*
     Create a variable called 'gitCloneDefinition'.  
@@ -34,7 +34,7 @@
 */
 
 //CODE HERE
-
+let gitCloneDefinition = "git clone will copy a repo from gitHub and put it onto my machine"
 //////////////////PROBLEM 5////////////////////
 /*
     Create a variable called 'gitStatusDefinition'.  
@@ -42,7 +42,7 @@
 */
 
 //CODE HERE
-
+let gitStatusDefinition = "git status tells me about the current repo status"
 //////////////////PROBLEM 6////////////////////
 /*
     Create a variable called 'gitAddDefinition'.  
@@ -53,6 +53,8 @@
 */
 
 //CODE HERE
+let gitAddDefinition = "git add adds files to be tracked to the repository"
+let gitAddCode = "git add ."
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -64,7 +66,8 @@
 */
 
 //CODE HERE
-
+let gitCommitDefinition = "saves a snapshot of the files being tracked"
+let gitCommitCode = 'git commit -m "inital commit"'
 
 //////////////////PROBLEM 8////////////////////
 /*
@@ -73,3 +76,6 @@
 */
 
 //CODE HERE
+let gitPushDefinition = "git push puts my local commits on gitHub"
+
+// console.log("all done")
