@@ -25,4 +25,4 @@ const implementation = "For step number 4, we will begin to actually write out t
 const testingAndintegration = "Here is the 5th step, and we begin to integrate the app with existing products, and get users involved with the product so we can see if there are any major bugs."
 const maintain = "The last step is often overlooked, it is when you continue to make improvements or changes to the code to make sure it stays working."
 
-console.log("done with first page")
+//console.log("done with first page")
