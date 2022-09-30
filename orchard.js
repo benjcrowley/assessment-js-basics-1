@@ -27,9 +27,9 @@
     in cents. 
 */
 
-const fujiAcres = [2, 3, 3, 2, 2, 2, 1]
-const galaAcres = [5, 2, 4, 3, 6, 2, 4]
-const pinkAcres = [1, 5, 4, 2, 1, 5, 4]
+const fujiAcres = [2, 3, 3, 2, 2, 2, 1] // = 15
+const galaAcres = [5, 2, 4, 3, 6, 2, 4] // = 26
+const pinkAcres = [1, 5, 4, 2, 1, 5, 4] // = 22
 
 const fujiPrice = .89 
 const galaPrice = .64
@@ -51,7 +51,12 @@ const pinkPrice = .55
 
 // CODE HERE
 
-
+//start by creating a variable for the total and a for loop to run through each day of the week
+let totalAcres = null
+for (i=0; i < fujiAcres.length; i++) {
+    totalAcres += fujiAcres[i] + galaAcres[i] + pinkAcres[i] //using += will allow me to add on each days total from each farm
+}
+console.log(totalAcres)
 
 
 
@@ -68,10 +73,10 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+//pretty simple, divde totalAcres by the number of days apples were picked 
+let averageDailyAcres = totalAcres / 7
 
-
-
-
+console.log(averageDailyAcres)
 
 // PROBLEM 3
 
@@ -106,8 +111,13 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
+// a while loop will run until there are no more acres left, make sure to include a line to decrement the acresLeft or else it will be an infinte loop
 
-
+while(acresLeft > 0){
+    days ++ //adds a count to the days variable
+    acresLeft -= averageDailyAcres //subtracts the acres we can harvest in a day from the acres we have left
+}
+console.log(days)
 
 // PROBLEM 4
 
@@ -134,10 +144,20 @@ let days = 0
 */
 
 // CODE HERE
+//create the arrays
+let fujiTons = []
+let galaTons = []
+let pinkTons = []
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+for (i = 0; i < fujiAcres.length; i++){ //a for loop to iterate through each day
+
+    fujiTons.push(fujiAcres[i]*6.5)
+    galaTons.push(galaAcres[i]*6.5) //pushing the value of the acre multiplied by the pound per acre
+    pinkTons.push(pinkAcres[i]*6.5)
+}
+console.log(fujiTons)
+console.log(galaTons) //logging output
+console.log(pinkTons)
 
 
 
@@ -162,10 +182,19 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+//this is similar to the first problem, loop through, then add those values multiplied by 2000 into each variable
 
+let fujiPounds = 0
+let galaPounds = 0 //create variables
+let pinkPounds = 0
+
+//each itteration will add onto the variables the poundage of apples for the day
+for (i = 0; i < fujiTons.length; i++){
+    fujiPounds = fujiTons[i]*2000
+    galaPounds += galaTons[i]*2000
+    pinkPounds += pinkTons[i]*2000
+}
+console.log(fujiPounds, galaPounds, pinkPounds)
 
 
 
@@ -188,11 +217,13 @@ let days = 0
 */
 
 // CODE HERE
+//multiply each pounds by their price
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiPounds * fujiPrice
+let galaProfit = galaPounds * galaPrice
+let pinkProfit = pinkPounds * pinkPrice
 
+console.log(fujiProfit, galaProfit, pinkProfit)
 
 
 
@@ -209,3 +240,7 @@ let days = 0
 */
 
 // CODE HERE
+
+let totalProfit = fujiProfit + galaProfit + pinkProfit //you can use the + operator to add up the value of variables
+
+console.log(totalProfit)
